@@ -1,24 +1,43 @@
-.slider {
-    width: 900px;
-    height: 600px;
+.visually-hidden {
+    visibility: hidden;
+}
+
+.main-header {
+    /* display: flex;
+    flex-direction: column; */
+    border: 1px solid rgba(221, 52, 52, 0.867);
+}
+
+.main-navigation {
+    display: flex;   
+    border: 1px solid rgba(5, 70, 247, 0.867);
+    align-items: center;    
+}
+
+/* .slider {
+    width: 80%;
+    height: 300px;
     overflow: hidden;
     border: 10px solid yellow;
     background-color: rgba(30, 19, 19, 0.214);
-}
-.header {
-    position: absolute;
+} */
+
+/* .header-slider {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.slider-navigation {
+} */
+
+/* .slider-navigation {
     position: absolute;
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-}
-.bar {
+    
+} */
+/* .bar {
     height: 8px;
     width: 30px;
     margin: 6px;
@@ -27,16 +46,22 @@
     opacity: .5;
     border-radius: 10px;
     transition: all .4s ease;
-}
-.bar:hover {
+} 
+*/
+/* input[name="r"]:hover {
     opacity: 0.8;
     transform: scale(1.1);
-}
-input[name="r"] {
+} */
+
+/* input[name="r"] {
     position: absolute;
-    visibility: hidden;
-}
-.slider-content {
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+} */
+
+/* .slider-content {
     width: 300%;
     height: 100%;
     display: flex;
@@ -57,4 +82,169 @@ input[name="r"] {
 }
 #r3:checked ~ .list1 {
     margin-left: -50%;
-}
+} 
+  */
+  /* .advantages {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1440px;
+    height: 2476px;
+    z-index: 66;
+  }
+  .Веб_сайты {
+    font-size: 7px;
+    font-family: "Roboto";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.25;
+    text-align: left;
+    -moz-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -webkit-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -ms-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    position: absolute;
+    left: 188.821px;
+    top: 804.221px;
+    z-index: 65;
+  }
+  .ЗАКАЗАТЬ {
+    font-size: 4.564px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    line-height: 1.125;
+    text-align: center;
+    -moz-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -webkit-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -ms-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    position: absolute;
+    left: 208.258px;
+    top: 944.933px;
+    z-index: 64;
+  }
+  .Layer_42 {
+    background-image: url("Layer 42.png");
+    position: absolute;
+    left: 140px;
+    top: 922px;
+    width: 160px;
+    height: 50px;
+    z-index: 63;
+  }
+  .Мир_никогда_не_будет_прежним_после_того_как_уви {
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(40, 49, 54);
+    line-height: 1.5;
+    text-align: left;
+    position: absolute;
+    left: 139.781px;
+    top: 868.313px;
+    width: 238px;
+    height: 41px;
+    z-index: 61;
+  }
+  .ЗАКАЗАТЬ_copy_2 {
+    font-size: 4.564px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    line-height: 1.125;
+    text-align: center;
+    -moz-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -webkit-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -ms-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    position: absolute;
+    left: 1008.257px;
+    top: 944.933px;
+    z-index: 59;
+  }
+  .Layer_42_copy_2 {
+    background-image: url("Layer 42 copy 2.png");
+    position: absolute;
+    left: 940px;
+    top: 922px;
+    width: 160px;
+    height: 50px;
+    z-index: 58;
+  }
+  .ЗАКАЗАТЬ_copy {
+    font-size: 4.564px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    line-height: 1.125;
+    text-align: center;
+    -moz-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -webkit-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -ms-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    position: absolute;
+    left: 608.257px;
+    top: 944.933px;
+    z-index: 57;
+  }
+  .Layer_42_copy {
+    background-image: url("Layer 42 copy.png");
+    position: absolute;
+    left: 540px;
+    top: 922px;
+    width: 160px;
+    height: 50px;
+    z-index: 55;
+  }
+  .Приложения {
+    font-size: 7px;
+    font-family: "Roboto";
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.25;
+    text-align: left;
+    -moz-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -webkit-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -ms-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    position: absolute;
+    left: 598.031px;
+    top: 806.221px;
+    z-index: 54;
+  }
+  .Покорите_топ_10_приложений_в_AppStore_и_Google_ {
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(40, 49, 54);
+    line-height: 1.5;
+    text-align: left;
+    position: absolute;
+    left: 541px;
+    top: 869.313px;
+    width: 238px;
+    height: 40px;
+    z-index: 53;
+  }
+  .Презентации {
+    font-size: 7px;
+    font-family: "Roboto";
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.25;
+    text-align: left;
+    -moz-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -webkit-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    -ms-transform: matrix( 3.50541372649093,0,0,3.50541372649093,0,0);
+    position: absolute;
+    left: 1005.506px;
+    top: 815.767px;
+    z-index: 52;
+  }
+  .Вы_даже_не_подозреваете___насколько_вы_изумител {
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(40, 49, 54);
+    line-height: 1.5;
+    text-align: left;
+    position: absolute;
+    left: 939.781px;
+    top: 869.313px;
+    width: 213px;
+    height: 40px;
+    z-index: 51;
+  } */
+ 
+  
