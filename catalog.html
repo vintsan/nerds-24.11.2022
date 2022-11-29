@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
 </head>
 
 <body>
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo" href="index.html">
-                <img src="/svg-nerds/nerds-logo.svg" width="181" height="76" alt="Студия Nerds">
+                <img src="/svg-nerds/nerds-logo.svg" width="160" height="65" alt="Студия Nerds">
             </a>
             <ul class="site-navigation">
                 <li><a href="studio.html">Студия</a></li>
                 <li><a href="clients.html">Клиенты</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
+                <li class="site-navigation-current"><a href="#">Магазин</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <ul class="user-navigation">
@@ -30,38 +30,69 @@
 
 
     <main class="main-catalog">
-        <section class="filter">
-            <div class="filter-cost">
-                <h2>СТОИМОСТЬ:</h2>
-                ползунок
-                <form class="filter-cost-form" action="httms://echo.htmlacademy.ru" method="post">
+        <section class="catalog-filters">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+
+            <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+                <fieldset>
+                    <legend>СТОИМОСТЬ: (и ползунок)</legend>
                     <p class="filter-form-item">от<input type="text" name="name" value="" placeholder="0"></p>
                     <p class="filter-form-item">до<input type="text" name="e-mail" value="" placeholder="15000"></p>
-                </form>
-            </div>
+                </fieldset>
+                <fieldset>
+                    <legend>СЕТКА:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio"
+                                name="product-group" value="Adaptive" checked>
+                            Адаптивная
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio"
+                                name="product-group" value="Fixed">
+                            Фиксированная
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio"
+                                name="product-group" value="Rubber">
+                            Резиновая
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>ОСОБЕННОСТИ:</legend>
+                    <ul>
+                        <li class="filter-features-button">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Слайдер" checked>
+                            Слайдер
+                        </li>
+                        <li class="filter-features-button">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Блок-преимуществ">
+                            Блок преимуществ
+                        </li>
+                        <li class="filter-features-button">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Новости" checked>
+                            Новости
+                        </li>
+                        <li class="filter-features-button">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Галерея">
+                            Галерея
+                        </li>
+                        <li class="filter-features-button">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Корзина">
+                            Корзина
+                        </li>
+                    </ul>
+                </fieldset>
 
-            <div class="filter-grid">
-                <h2>СЕТКА:</h2>
-                <ul class="filter-grid-button">
-                    <li>Адаптивная</li>
-                    <li>Фиксированная</li>
-                    <li>Резиновая</li>
-                </ul>
-            </div>
+                <button class="filter-button button" type="submit">
+                    ПОКАЗАТЬ
+                </button>
 
-            <div class="filter-features">
-                <h2>ОСОБЕННОСТИ:</h2>
-                <ul class="filter-features-button">
-                    <li>Слайдер</li>
-                    <li>Блок преимуществ</li>
-                    <li>Новости</li>
-                    <li>Галерея</li>
-                    <li>Корзина</li>
-                </ul>
-            </div>
+            </form>
 
-            <button class="button" type="submit">ПОКАЗАТЬ</button>
         </section>
+
 
         <section class="sorting">
             <ul class="sorting-filter">
@@ -69,9 +100,9 @@
                 <li>По цене</li>
                 <li>По типу</li>
                 <li>По названию</li>
-             </ul>
-             <button>вверх</button>
-             <button>вниз</button>
+            </ul>
+            <button>вверх</button>
+            <button>вниз</button>
         </section>
 
         <section class="templates">
@@ -94,16 +125,29 @@
 
 
     <footer>
+
         <section class="footer-contacts-map">
-            <img src="/image/map+marker.png" alt="map+marker">
+            <img src="/image/map+marker.png" alt="">
             <div class="contacts">
                 <h4>NЁRDS DESIGN STUDIO</h4>
                 <p>191186, Санкт-Петербург,
                     <br>ул. Б. Конюшенная, д. 19/8
                     <br>тел. +7 (812) 275-75-75
                 </p>
+                <a class="contacts-map-button" href="contacts.html">Напишите нам</a>
             </div>
-            <button class="contacts-map-button">Напишите нам</button>
+        </section>
+
+        <section class="footer-cocial">
+            <div>
+                <ul>
+                    <li><a class="social-button" href="#"><img src="/svg-nerds/vk-icon.svg" alt="Вконтакте">Вконтакте</a></li>
+                    <li><a class="social-button" href="#"><img src="/svg-nerds/fb-icon.svg" alt="Фейсбук">Фейсбук</a></li>
+                    <li><a class="social-button" href="#"><img src="/svg-nerds/insta-icon.svg" alt="Инстаграм">Инстаграм</a></li>
+                </ul>
+            </div>
+            <b>Давайте дружить, это выгодно!</b>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
         </section>
 
         <section class="footer-modal-write-us">
@@ -123,15 +167,7 @@
             <span class="modal-close">X</span>
 
         </section>
-
-        <section class="footer-cocial">
-            <img src="/svg-nerds/vk-icon.svg" alt="vk-icon">
-            <img src="/svg-nerds/fb-icon.svg" alt="fb-icon">
-            <img src="/svg-nerds/insta-icon.svg" alt="insta-icon">
-            <h2>Давайте дружить, это выгодно!</h2>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
-        </section>
-
+        
     </footer>
 
 </body>
