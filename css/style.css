@@ -237,3 +237,34 @@ hr {
   font-weight: 400;
   image-rendering: crisp-edges;
 }
+
+
+.footer-modal-write-us h3 {
+    font-size: 45px;
+    line-height: 45px;
+   font-weight: 500;
+}
+.footer-modal-form p {
+    font-weight: 700;
+}
+.modal-form-item input {
+    font-weight: 400;
+    opacity: 0.5;
+}
+.footer-modal-form .button {
+    color: #ffffff;
+    background-color: #fb565a;
+    border: none;
+    border-radius: 2px;
+}
+.footer-modal-form .button:hover {
+    background-color: #e74246;
+}
+.footer-modal-form .button:focus {
+    color: #e37376;
+    background-color: #d7373b;
+}
+.modal-close {
+    color: #fecccd;
+   
+}
