@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -36,6 +38,7 @@
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset>
                     <legend>СТОИМОСТЬ: (и ползунок)</legend>
+                    <input type="range">
                     <p class="filter-form-item">от<input type="text" name="name" value="" placeholder="0"></p>
                     <p class="filter-form-item">до<input type="text" name="e-mail" value="" placeholder="15000"></p>
                 </fieldset>
@@ -63,23 +66,28 @@
                     <legend>ОСОБЕННОСТИ:</legend>
                     <ul>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Слайдер" checked>
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                name="Слайдер" checked>
                             Слайдер
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Блок-преимуществ">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                name="Блок-преимуществ">
                             Блок преимуществ
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Новости" checked>
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                name="Новости" checked>
                             Новости
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Галерея">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                name="Галерея">
                             Галерея
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Корзина">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                name="Корзина">
                             Корзина
                         </li>
                     </ul>
@@ -97,12 +105,11 @@
         <section class="sorting">
             <ul class="sorting-filter">
                 <h2>СОРТИРОВАТЬ:</h2>
-                <li>По цене</li>
-                <li>По типу</li>
-                <li>По названию</li>
-            </ul>
-            <button>вверх</button>
-            <button>вниз</button>
+                <a href="#">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По названию</a>
+                <a href="#"><img src="/svg-nerds/icon-up-dir.svg" alt=""> вверх</a>
+                <a href="#"><img src="/svg-nerds/icon-down-dir.svg" alt=""> вниз</a>
         </section>
 
         <section class="templates">
@@ -141,9 +148,12 @@
         <section class="footer-cocial">
             <div>
                 <ul>
-                    <li><a class="social-button" href="#"><img src="/svg-nerds/vk-icon.svg" alt="Вконтакте">Вконтакте</a></li>
-                    <li><a class="social-button" href="#"><img src="/svg-nerds/fb-icon.svg" alt="Фейсбук">Фейсбук</a></li>
-                    <li><a class="social-button" href="#"><img src="/svg-nerds/insta-icon.svg" alt="Инстаграм">Инстаграм</a></li>
+                    <li><a class="social-button" href="#"><img src="/svg-nerds/vk-icon.svg"
+                                alt="Вконтакте">Вконтакте</a></li>
+                    <li><a class="social-button" href="#"><img src="/svg-nerds/fb-icon.svg" alt="Фейсбук">Фейсбук</a>
+                    </li>
+                    <li><a class="social-button" href="#"><img src="/svg-nerds/insta-icon.svg"
+                                alt="Инстаграм">Инстаграм</a></li>
                 </ul>
             </div>
             <b>Давайте дружить, это выгодно!</b>
@@ -167,7 +177,7 @@
             <span class="modal-close">X</span>
 
         </section>
-        
+
     </footer>
 
 </body>
