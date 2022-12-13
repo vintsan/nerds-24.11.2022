@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Магазин Студии nerds</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -24,7 +24,10 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <ul class="user-navigation">
-                <li class="login-link">Корзина</li>
+                <li class="login-link">
+                    <img src="/image/cart-icon.png" alt="Иконка корзины">
+                    <a href="basket.html">Корзина</a>
+                </li>
             </ul>
         </nav>
         <h1>Магазин готовых шаблонов</h1>
@@ -37,28 +40,34 @@
 
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset>
-                    <legend>СТОИМОСТЬ: (и ползунок)</legend>
+                    <legend>СТОИМОСТЬ:</legend>
                     <input type="range">
-                    <p class="filter-form-item">от<input type="text" name="name" value="" placeholder="0"></p>
-                    <p class="filter-form-item">до<input type="text" name="e-mail" value="" placeholder="15000"></p>
+                    <p class="filter-form-item">
+                        от
+                        <input type="text" name="name" value="" placeholder="0">
+                    </p>
+                    <p class="filter-form-item">
+                        до
+                        <input type="text" name="e-mail" value="" placeholder="15000">
+                    </p>
                 </fieldset>
                 <fieldset>
                     <legend>СЕТКА:</legend>
                     <ul>
                         <li class="filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" type="radio"
-                                name="product-group" value="Adaptive" checked>
-                            Адаптивная
+                            <input class="visually-hidden filter-input filter-input-radio" id="adaptive-input-radio"
+                                type="radio" name="product-group" value="Adaptive" checked>
+                            <label class="label-input-radio" for="adaptive-input-radio">Адаптивная</label>
                         </li>
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-radio" type="radio"
-                                name="product-group" value="Fixed">
-                            Фиксированная
+                                id="fixed-input-radio" name="product-group" value="Fixed">
+                            <label class="label-input-radio" for="fixed-input-radio">Фиксированная</label>
                         </li>
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-radio" type="radio"
-                                name="product-group" value="Rubber">
-                            Резиновая
+                                id="rubber-input-radio" name="product-group" value="Rubber" disabled>
+                            <label class="label-input-radio" for="rubber-input-radio">Резиновая</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -66,29 +75,44 @@
                     <legend>ОСОБЕННОСТИ:</legend>
                     <ul>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Слайдер" checked>
-                            Слайдер
+                            <label class="label-features-button label-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Слайдер" checked>
+                                    <span class="checkbox"></span>
+                                Слайдер
+                            </label>
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Блок-преимуществ">
-                            Блок преимуществ
+                            <label class="label-features-button label-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Блок-преимуществ" disabled>
+                                    <span class="checkbox"></span>
+                                Блок преимуществ
+                            </label>
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Новости" checked>
-                            Новости
+                            <label class="label-features-button label-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Новости" checked>
+                                    <span class="checkbox"></span>
+                                Новости
+                            </label>
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Галерея">
-                            Галерея
+                            <label class="label-features-button label-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Галерея">
+                                    <span class="checkbox"></span>
+                                Галерея
+                            </label>
                         </li>
                         <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Корзина">
-                            Корзина
+                            <label class="label-features-button label-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Корзина">
+                                    <span class="checkbox"></span>
+                                Корзина
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
