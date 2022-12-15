@@ -1,0 +1,62 @@
+.catalog-filters ul {
+    list-style: none;
+    line-height: 30px;
+    
+}
+.filter fieldset {
+    border: none;
+}
+
+.filter-input-checkbox {
+    position: absolute;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding-left: 33px
+}
+.label-option {
+    color: #283136;
+    cursor: pointer;
+}
+.label-option::before {
+    content: "";    
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;    
+    background: url(/image/checkbox-off.png) no-repeat;
+    
+}
+
+.filter-input-checkbox:checked + .label-option::before {
+    background: url(/image/checkbox-on.png) no-repeat;    
+}
+
+/* hover */
+
+.filter-input-checkbox:hover + .label-option::before {
+    background: url(/image/checkbox-off-focus.png) no-repeat;
+}
+
+
+
+.filter-input-checkbox:checked:hover + .label-option::before {
+    background: url(/image/checkbox-on-focus.png) no-repeat;
+}
+
+/* disabled */
+
+.filter-input-checkbox:disabled + .label-option::before {
+    background: url(/image/checkbox-off-disabled.png) no-repeat;
+}
+.filter-input-checkbox:checked:disabled + .label-option::before {
+    background: url(/image/checkbox-on-disabled.png) no-repeat;
+}
+/* label */
+.filter-input-checkbox:hover + .label-option {
+    color: rgb(221, 20, 20);
+}
+.filter-input-checkbox:disabled + .label-option {
+    color: #bec1c2;
+    pointer-events: none;
+}

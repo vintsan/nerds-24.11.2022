@@ -210,7 +210,7 @@ hr {
   opacity: 0.2;
 }
 .partners-logo a:hover {
-  opacity: 1;
+   opacity: 1;
 }
 .partners-logo a:focus {
   opacity: 0.1;
@@ -359,13 +359,13 @@ hr {
 /* ФИЛЬТР ОСОБЕННОСТИ: */
 
 
-.label-option {
-    display: block;
-    color: #283136;
-    line-height: 20px;
-    font-weight: 400;
-    cursor: pointer; 
-    margin-bottom: 10px;
+.catalog-filters ul {
+    list-style: none;
+    line-height: 30px;
+    
+}
+.filter fieldset {
+    border: none;
 }
 
 .filter-input-checkbox {
@@ -375,42 +375,51 @@ hr {
    appearance: none;
    padding-left: 33px
 }
-.checkbox {
-    position: absolute;
-    margin-left: -33px;
+.label-option {
+    color: #283136;
+    cursor: pointer;
+}
+.label-option::before {
+    content: "";    
+    display: inline-block;
     width: 27px;
     height: 27px;
+    vertical-align: middle;    
     background: url(/image/checkbox-off.png) no-repeat;
-    background-color: #ffffff;
+    
 }
-/* checked checkbox*/
-.filter-input-checkbox:checked + .checkbox {    
-    background: url(/image/checkbox-on.png) no-repeat;
+
+.filter-input-checkbox:checked + .label-option::before {
+    background: url(/image/checkbox-on.png) no-repeat;    
 }
-/* focus checkbox*/
-.filter-input-checkbox:focus + .checkbox {   
+
+/* hover */
+
+.filter-input-checkbox:hover + .label-option::before {
     background: url(/image/checkbox-off-focus.png) no-repeat;
 }
-.filter-input-checkbox:checked:focus + .checkbox {   
+
+
+
+.filter-input-checkbox:checked:hover + .label-option::before {
     background: url(/image/checkbox-on-focus.png) no-repeat;
 }
-/* disabled checkbox*/
-.filter-input-checkbox:disabled + .checkbox {   
+
+/* disabled */
+
+.filter-input-checkbox:disabled + .label-option::before {
     background: url(/image/checkbox-off-disabled.png) no-repeat;
 }
-.filter-input-checkbox:checked:disabled + .checkbox {   
+.filter-input-checkbox:checked:disabled + .label-option::before {
     background: url(/image/checkbox-on-disabled.png) no-repeat;
 }
-/* hover checkbox*/
-.filter-input-checkbox:hover + .checkbox {
-    background: url(/image/checkbox-off-focus.png) no-repeat;
+/* disabled hover label */
+.filter-input-checkbox:hover + .label-option {
+    color: rgb(221, 20, 20);
 }
-.filter-input-checkbox:checked:hover + .checkbox {
-    background: url(/image/checkbox-on-focus.png) no-repeat;
+.filter-input-checkbox:disabled + .label-option {
+    color: #bec1c2;
+    pointer-events: none;
 }
-/* checked label name */
-.label-features-button:checked {
-    font-size: 50px;
-    color: rgb(231, 24, 24);
-    background-color: #00aa62;
-}
+
+
