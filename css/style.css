@@ -274,6 +274,7 @@ hr {
 
 .filter fieldset {
     border: none;
+
 }
 
 .filter legend {
@@ -290,71 +291,68 @@ hr {
 
 .filter ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.filter-option {
-    position: relative;
-    padding-left: 20px;
-    padding-bottom: 10px;
-}
 
-.filter-option label {
-    color: #283136;
-    line-height: 20px;
-    font-weight: 400;    
-}
-.filter-option label:hover {
-    color: #000;
+/* ФИЛЬТР СЕТКА */
+
+.filter-input-radio {
+    position: absolute;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding-left: 33px
 }
 
 .label-input-radio {
-    cursor: pointer;   
+    color: #283136;
+    cursor: pointer;
 }
 
 .label-input-radio::before {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 25px;    
-
-    background: url(/image/radio-off.png) no-repeat;
-    background-size: 25px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.label-input-radio::after {
-    content: "";
-    display: block;
+    content: "";    
+    display: inline-block;
     width: 25px;
     height: 25px;
-
-    background-size: 25px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    vertical-align: middle;    
+    background: url(/image/radio-off.png) no-repeat;
 }
-
+/* checked */
 .filter-input-radio:checked + .label-input-radio::before {
-    background:  url(/image/radio-on.png);   
+    background: url(/image/radio-on.png) no-repeat;    
 }
 
-.filter-input-radio:checked + .label-input-radio:hover:after {  
+/* hover */
+
+.filter-input-radio:hover + .label-input-radio::before {
+    background: url(/image/radio-off-op1.png) no-repeat;
+}
+.filter-input-radio:checked:hover + .label-input-radio::before {
     background: url(/image/radio-on-op1.png) no-repeat;
 }
 
-.filter-option:hover {
-    background: url(/image/radio-off-op1.png) no-repeat;
+.filter-input-radio:disabled + .label-input-radio::before {
+    background: url(/image/checkbox-off-disabled.png) no-repeat;
+}
+.filter-input-radio:checked:disabled + .label-input-radio::before {
+    background: url(/image/checkbox-on-disabled.png) no-repeat;
 }
 
-.filter-input-radio:disabled +
-.label-input-radio {
-    pointer-events: none;
-    opacity: 0.3;
+/* label */
+.filter-input-radio:hover + .label-input-radio {
+    color: rgb(221, 20, 20);
 }
+.filter-input-radio:disabled + .label-input-radio {
+    color: #bec1c2;
+    pointer-events: none;
+}
+
+
+
+
+
 
 /* ФИЛЬТР ОСОБЕННОСТИ: */
 
