@@ -288,73 +288,54 @@ hr {
     background-color: #eeeeee;
 }
 
+
+/* ФИЛЬТР СЕТКА: */
+
 .filter ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.filter-option {
-    position: relative;
-    padding-left: 20px;
-    padding-bottom: 10px;
-}
-
-.filter-option label {
-    color: #283136;
-    line-height: 20px;
-    font-weight: 400;    
-}
-.filter-option label:hover {
-    color: #000;
+.filter-input-radio {
+    position: absolute;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   
 }
 
 .label-input-radio {
-    cursor: pointer;   
+    color: #283136;
+    cursor: pointer;
+ 
 }
 
 .label-input-radio::before {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 25px;    
-
-    background: url(/image/radio-off.png) no-repeat;
-    background-size: 25px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.label-input-radio::after {
-    content: "";
-    display: block;
+    content: "";    
+    display: inline-block;
     width: 25px;
     height: 25px;
-
-    background-size: 25px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    vertical-align: middle;    
+    background: url(/image/radio-off.png) no-repeat;    
 }
 
-.filter-input-radio:checked + .label-input-radio::before {
-    background:  url(/image/radio-on.png);   
+.filter-input-radio:checked + 
+.label-input-radio::before {
+    background: url(/image/radio-on.png);
 }
 
-.filter-input-radio:checked + .label-input-radio:hover:after {  
+/* hover */
+.filter-input-radio:hover + .label-input-radio::before {
     background: url(/image/radio-on-op1.png) no-repeat;
 }
 
-.filter-option:hover {
+.filter-input-radio:checked:hover + .label-input-radio::before {
     background: url(/image/radio-off-op1.png) no-repeat;
 }
 
-.filter-input-radio:disabled +
-.label-input-radio {
-    pointer-events: none;
-    opacity: 0.3;
-}
+
+
 
 /* ФИЛЬТР ОСОБЕННОСТИ: */
 
@@ -376,7 +357,7 @@ hr {
    padding-left: 33px
 }
 .label-option {
-    color: #283136;
+    color: #394349;
     cursor: pointer;
 }
 .label-option::before {
@@ -385,41 +366,46 @@ hr {
     width: 27px;
     height: 27px;
     vertical-align: middle;    
-    background: url(/image/checkbox-off.png) no-repeat;
-    
+    background: url(/image/checkbox-off.png) no-repeat;    
 }
 
+/* checked */
 .filter-input-checkbox:checked + .label-option::before {
     background: url(/image/checkbox-on.png) no-repeat;    
 }
 
 /* hover */
-
 .filter-input-checkbox:hover + .label-option::before {
     background: url(/image/checkbox-off-focus.png) no-repeat;
 }
-
-
-
 .filter-input-checkbox:checked:hover + .label-option::before {
     background: url(/image/checkbox-on-focus.png) no-repeat;
 }
 
 /* disabled */
-
 .filter-input-checkbox:disabled + .label-option::before {
     background: url(/image/checkbox-off-disabled.png) no-repeat;
 }
 .filter-input-checkbox:checked:disabled + .label-option::before {
     background: url(/image/checkbox-on-disabled.png) no-repeat;
 }
-/* disabled hover label */
+
+/* label */
 .filter-input-checkbox:hover + .label-option {
-    color: rgb(221, 20, 20);
+    color: #000000;
 }
 .filter-input-checkbox:disabled + .label-option {
     color: #bec1c2;
     pointer-events: none;
 }
 
-
+/* focus */
+.filter-input-checkbox:focus + .label-option::before {
+    background: url(/image/checkbox-off-focus.png) no-repeat;
+}
+.filter-input-checkbox:checked:focus + .label-option::before {
+    background: url(/image/checkbox-on-focus.png) no-repeat;
+}
+.filter-input-checkbox:focus + .label-option {
+    color: #000000;
+}
