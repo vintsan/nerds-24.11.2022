@@ -471,13 +471,45 @@ hr {
 /* СОРТИРОВАТЬ: */
 
 .sorting-filter ul {
-    display: block;
+    display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0;
-    
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;   
 }
-.sorting-filter fieldset {
+.sorting-input-checkbox + label {    
+    opacity: 0.3;
+}
+
+.sorting-input-checkbox:hover + label {
+    color: #000000;
+    opacity: 0.6;
+}
+
+.sorting-input-checkbox:checked + label {    
+    opacity: 1;
+}
+.sorting-input-checkbox:active + label {    
+    opacity: 1;
+}
+
+.sorting-input-button button {
     border: none;
+    background-color: #ffffff;
+    opacity: 0.2;
 }
-cursor: pointer;
+
+.sorting-input-button button:hover {
+opacity: 0.5;
+}
+
+.sorting-input-button button:active {
+    opacity: 1;
+}
+.sorting-input-button button:checked {
+    opacity: 1;
+}
