@@ -127,24 +127,31 @@
                     <legend>СОРТИРОВАТЬ:</legend>
                     <ul>
                         <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="По цене" id="sorting-label-checkbox-price" checked>
+                            <input class="sorting-input-checkbox" type="checkbox" name="По цене"
+                                id="sorting-label-checkbox-price" checked>
                             <label for="sorting-label-checkbox-price">По цене</label>
                         </li>
                         <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="По типу" id="sorting-label-checkbox-type">
+                            <input class="sorting-input-checkbox" type="checkbox" name="По типу"
+                                id="sorting-label-checkbox-type">
                             <label for="sorting-label-checkbox-type">По типу</label>
                         </li>
                         <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="По названию" id="sorting-label-checkbox">
+                            <input class="sorting-input-checkbox" type="checkbox" name="По названию"
+                                id="sorting-label-checkbox">
                             <label for="sorting-label-checkbox">По названию</label>
                         </li>
                         <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="Вверх">
-                            <button class="button-up"><img src="/image/icon-up-dir.svg" alt=""></button>
+                            <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-up">
+                            <label for="input-button-up">
+                                <img src="/image/icon-up-dir.svg" alt="">
+                            </label>
                         </li>
                         <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="Вниз" id="input-button-down">
-                            <label for="input-button-down"><button class="button-up" ><img src="/svg-nerds/icon-down-dir.svg" alt=""></button></label>
+                            <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-down">
+                            <label for="input-button-down">
+                                <img src="/svg-nerds/icon-down-dir.svg" alt="">
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
@@ -153,7 +160,7 @@
 
         <section class="templates">
             <div class="templates-img">
-                <img src="/image/img-sedona.jpg" alt="седона">
+                <img class="browser-img" src="/image/img-sedona.jpg" alt="седона">
                 <img src="/image/img-pink.jpg" alt="PINK">
                 <img src="/image/img-barbershop.jpg" alt="Барбершоп">
                 <img src="/image/img-mishka.jpg" alt="MISHKA">
@@ -161,10 +168,20 @@
                 <img src="/image/img-kvast.jpg" alt="КВАСТ">
             </div>
 
-            <button class="button" type="submit">1</button>
-            <button class="button" type="submit">2</button>
-            <button class="button" type="submit">3</button>
-            <button class="button" type="submit">СЛЕДУЮЩАЯ</button>
+            <ul class="pagination-list">
+                <li class="pagination-item">
+                    <a href="#">1</a>
+                    </li>
+                <li class="pagination-item">
+                    <a href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#">СЛЕДУЮЩАЯ</a>
+                </li>
+            </ul>
         </section>
 
     </main>
@@ -172,9 +189,9 @@
 
     <footer>
 
-        <section class="footer-contacts-map">
-            <img src="/image/map+marker.png" alt="">
-            <div class="contacts">
+        <section class="footer-map">
+            <img src="/image/map+marker.png" alt="Как нас найти">
+            <div class="footer-map-contacts">
                 <h4>NЁRDS DESIGN STUDIO</h4>
                 <p>191186, Санкт-Петербург,
                     <br>ул. Б. Конюшенная, д. 19/8
@@ -187,12 +204,21 @@
         <section class="footer-cocial">
             <div>
                 <ul>
-                    <li><a class="social-button" href="#"><img src="/svg-nerds/vk-icon.svg"
-                                alt="Вконтакте">Вконтакте</a></li>
-                    <li><a class="social-button" href="#"><img src="/svg-nerds/fb-icon.svg" alt="Фейсбук">Фейсбук</a>
+                    <li>
+                        <a class="social-button" href="#">
+                            <img src="/svg-nerds/vk-icon.svg" alt="">
+                        </a>
                     </li>
-                    <li><a class="social-button" href="#"><img src="/svg-nerds/insta-icon.svg"
-                                alt="Инстаграм">Инстаграм</a></li>
+                    <li>
+                        <a class="social-button" href="#">
+                            <img src="/svg-nerds/fb-icon.svg" alt="Фейсбук">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-button" href="#">
+                            <img src="/svg-nerds/insta-icon.svg" alt="Инстаграм">
+                        </a>
+                    </li>
                 </ul>
             </div>
             <b>Давайте дружить, это выгодно!</b>
@@ -214,6 +240,7 @@
             </form>
 
             <span class="modal-close">X</span>
+            <img src="/image/modal-close.png" alt="закрыть окно">
 
         </section>
 
