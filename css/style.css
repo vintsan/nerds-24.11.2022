@@ -1,7 +1,12 @@
+.html,
+body {
+  width: 1440px;
+  height: 2476px;
+}
+
 body {
   margin: 0;
   padding: 0;
-  width: 1440px;
 
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
@@ -24,25 +29,62 @@ a {
 }
 
 .main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: #eeeeee;
   background-image: url(/image/grey-back.png);
+  margin-bottom: 80px;
+
+  /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
 }
 
 .main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 1160px;
   font-size: 16px;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
+
+  /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
 }
 
-.site-navigation,
-.user-navigation {
+.site-navigation {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
+}
+
+.user-navigation {
+  width: 180px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
 }
 
 .site-navigation a,
 .user-navigation a {
   color: #000000;
+}
+
+.main-header-logo {
+  width: 160px;
+  height: 65px;
 }
 
 .main-header-logo img:hover {
@@ -65,6 +107,53 @@ a {
   opacity: 0.3;
 }
 
+
+
+.slider-content {
+    margin: 0;
+    padding: 0;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  /* justify-content: space-between; */
+
+   /* ВРЕМЕННО ДЛЯ СЕТКИ */
+   border: 1px solid #ec1515;
+}
+
+.slider-navigation {
+    margin: 0;
+    padding: 0;
+    width: 90px;
+
+       /* ВРЕМЕННО ДЛЯ СЕТКИ */
+   border: 1px solid #ec1515;
+}
+
+.slider-content-info-list {
+    display: flex;
+    align-items: center;
+        /* justify-content: space-between; */
+
+       
+}
+
+.info-list {
+    min-width: 400px;
+
+       /* ВРЕМЕННО ДЛЯ СЕТКИ */
+   border: 1px solid #ec1515;
+}
+
+
+
+
+
+
+
+
 .slider-content-info a {
   font-size: 16px;
   line-height: 18px;
@@ -84,8 +173,33 @@ a {
   background-color: #be2c2f;
 }
 
+/* container */
 .main-page {
   width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.presentation-list {
+    display: flex;
+    
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+
+    list-style: none;
+}
+
+.presentation-item {
+    width: 300px;
+
+      /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
+}
+
+.working-presentation {
+   margin-bottom: 40px; 
 }
 
 .working-presentation h3 {
@@ -148,6 +262,30 @@ a {
 
 hr {
   opacity: 0.35;
+
+}
+
+/* index-columns */
+.advantages {
+display: flex;
+
+justify-content: space-between;
+
+margin-bottom: 80px;
+
+      /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
+}
+
+.info-studio1 {
+width: 660px;
+
+border: 1px solid #ec1515;
+}
+.info-studio2 {
+width: 360px;
+
+border: 1px solid #ec1515;
 }
 
 .info-studio1 h3 {
@@ -200,6 +338,42 @@ hr {
   font-weight: 400;
 }
 
+.partners-HTMLAcademy {
+    width: 199px;
+
+  /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
+}
+.partners-barbershop {
+    width: 209px;
+
+      /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
+}
+.partners-PINK {
+    width: 185px;
+
+      /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515;
+}
+.partners-MISHKA {
+    width: 173px;
+    
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+  border: 1px solid #ec1515; 
+}
+
+/* index-columns */
+.partners {
+    display: flex;
+
+    justify-content: space-between;
+    
+    margin-bottom: 80px;
+    
+          /* ВРЕМЕННО ДЛЯ СЕТКИ */
+      border: 1px solid #ec1515;
+}
 .partners-logo li {
   list-style: none;
 }
@@ -459,8 +633,8 @@ hr {
 /* СОРТИРОВАТЬ: */
 
 .sorting-filter fieldset {
-    border: none;
-  }
+  border: none;
+}
 /* .sorting-input-checkbox {
     position: absolute;
    -webkit-appearance: none;
@@ -495,7 +669,6 @@ hr {
   opacity: 1;
 }
 
-
 /* templates */
 
 /* templates-img */
@@ -505,29 +678,28 @@ hr {
 }
 .templates-img a::before {
   content: "";
-  
+
   width: 360px;
   height: 40px;
-  
+
   background: url(/image/browser.png) no-repeat;
 }
-
 
 /* pagination-list */
 
 .pagination-list {
-    list-style: none;
+  list-style: none;
 }
 
 .pagination-item a {
-    color: #000000;
-    background-color: #eeeeee;
+  color: #000000;
+  background-color: #eeeeee;
 }
 
 .pagination-item a:hover {
-    background-color: #dfdfdf;
+  background-color: #dfdfdf;
 }
 
 .pagination-item a:checked {
-    opacity: 0.3;
+  opacity: 0.3;
 }
