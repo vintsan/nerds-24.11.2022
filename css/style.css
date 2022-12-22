@@ -15,7 +15,7 @@ body {
     color: #000000;
 
     background-color: white;
-    background-image: url(/image/white-back.png);
+    background-image: url(../image/white-back.png);
     background-position: 0 0;
     background-repeat: repeat;
 
@@ -38,7 +38,7 @@ a {
     align-items: center;
 
     background-color: #eeeeee;
-    background-image: url(/image/grey-back.png);
+    background-image: url(../image/grey-back.png);
     margin-bottom: 60px;
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
@@ -339,7 +339,7 @@ hr {
 }
 
 .info-studio1 li::before {
-    content: url(/image/line-red.png);
+    content: url(../image/line-red.png);
     margin-right: 10px;
 }
 
@@ -646,29 +646,29 @@ hr {
     width: 25px;
     height: 25px;
     vertical-align: middle;
-    background: url(/image/radio-off.png) no-repeat;
+    background: url(../image/radio-off.png) no-repeat;
 }
 
 /* checked */
 .filter-input-radio:checked+.label-input-radio::before {
-    background: url(/image/radio-on.png) no-repeat;
+    background: url(../image/radio-on.png) no-repeat;
 }
 
 /* hover */
 .filter-input-radio:hover+.label-input-radio::before {
-    background: url(/image/radio-off-op1.png) no-repeat;
+    background: url(../image/radio-off-op1.png) no-repeat;
 }
 
 .filter-input-radio:checked:hover+.label-input-radio::before {
-    background: url(/image/radio-on-op1.png) no-repeat;
+    background: url(../image/radio-on-op1.png) no-repeat;
 }
 
 .filter-input-radio:disabled+.label-input-radio::before {
-    background: url(/image/checkbox-off-disabled.png) no-repeat;
+    background: url(../image/checkbox-off-disabled.png) no-repeat;
 }
 
 .filter-input-radio:checked:disabled+.label-input-radio::before {
-    background: url(/image/checkbox-on-disabled.png) no-repeat;
+    background: url(../image/checkbox-on-disabled.png) no-repeat;
 }
 
 /* label */
@@ -720,30 +720,30 @@ hr {
     width: 27px;
     height: 27px;
     vertical-align: middle;
-    background: url(/image/checkbox-off.png) no-repeat;
+    background: url(../image/checkbox-off.png) no-repeat;
 }
 
 .filter-input-checkbox:checked+.label-option::before {
-    background: url(/image/checkbox-on.png) no-repeat;
+    background: url(../image/checkbox-on.png) no-repeat;
 }
 
 /* hover */
 
 .filter-input-checkbox:hover+.label-option::before {
-    background: url(/image/checkbox-off-focus.png) no-repeat;
+    background: url(../image/checkbox-off-focus.png) no-repeat;
 }
 
 .filter-input-checkbox:checked:hover+.label-option::before {
-    background: url(/image/checkbox-on-focus.png) no-repeat;
+    background: url(../image/checkbox-on-focus.png) no-repeat;
 }
 
 /* disabled */
 .filter-input-checkbox:disabled+.label-option::before {
-    background: url(/image/checkbox-off-disabled.png) no-repeat;
+    background: url(../image/checkbox-off-disabled.png) no-repeat;
 }
 
 .filter-input-checkbox:checked:disabled+.label-option::before {
-    background: url(/image/checkbox-on-disabled.png) no-repeat;
+    background: url(../image/checkbox-on-disabled.png) no-repeat;
 }
 
 /* disabled hover label */
@@ -850,7 +850,7 @@ hr {
     width: 360px;
     height: 40px;
 
-    background: url(/image/browser.png) no-repeat;
+    background: url(../image/browser.png) no-repeat;
 }
 
 /* pagination-list */
