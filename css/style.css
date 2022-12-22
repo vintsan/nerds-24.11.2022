@@ -819,18 +819,25 @@ hr {
 /* templates */
 
 .templates {
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 5px solid #00aa62;
     
 }
+
+/* templates-img */
 .templates-img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+  
+/* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 5px solid #153cec;
 }
 
 
-/* templates-img */
-d
+
+
 
 
 .templates-img .browser-img {
@@ -849,7 +856,14 @@ d
 /* pagination-list */
 
 .pagination-list {
+    width: 445px;
+    margin: 0;
+    padding: 0;
     list-style: none;
+
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 5px solid #153cec;
 }
 
 .pagination-item a {
