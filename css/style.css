@@ -24,9 +24,9 @@ body {
     border: 1px solid #ec1515;
 }
 
-/* .visually-hidden {
+.visually-hidden {
     visibility: hidden;
-} */
+}
 
 a {
     text-decoration: none;
@@ -120,6 +120,8 @@ a {
 
 
 
+
+
 .slider-content {
     width: 1160px;
     margin: 0;
@@ -133,6 +135,21 @@ a {
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
+}
+
+.main-catalog {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+        /* ВРЕМЕННО ДЛЯ СЕТКИ */
+        border: 1px solid #ec1515;
+}
+
+.main-catalog-columns {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
 }
 
 .slider-navigation {
@@ -576,11 +593,19 @@ hr {
     color: #fecccd;
 }
 
-.filter fieldset {
-    border: none;
+
+/* ФИЛЬТРЫ */
+
+.filter {
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 5px solid #c815ec;
+}
+
+.filter fieldset {
+    border: none;
+
+
 }
 
 .filter legend {
@@ -660,11 +685,22 @@ hr {
 
 /* ФИЛЬТР ОСОБЕННОСТИ: */
 
+.catalog-filters {
+    width: 260px;
+
+    border: 5px solid #c815ec;
+}
 .catalog-filters ul {
+    
     list-style: none;
     line-height: 30px;
 }
 
+.sorting-section {
+    
+
+    border: 5px solid #c815ec;
+}
 /* .filter-input-checkbox {
     position: absolute;
    -webkit-appearance: none;
@@ -771,9 +807,31 @@ hr {
     opacity: 1;
 }
 
+
+/* sorting */
+
+.sorting {
+    width: 760px;
+    margin: 0;
+    padding: 0;
+}
+
 /* templates */
 
+.templates {
+    border: 5px solid #00aa62;
+    
+}
+.templates-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
 /* templates-img */
+d
+
 
 .templates-img .browser-img {
     display: inline-block;
@@ -806,3 +864,6 @@ hr {
 .pagination-item a:checked {
     opacity: 0.3;
 }
+
+
+

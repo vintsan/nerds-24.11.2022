@@ -34,216 +34,224 @@
     </header>
 
 
-    <main class=" ">
-        <section class="catalog-filters">
-            <h2 class="visually-hidden">Фильтр товаров</h2>
-
-            <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-                <fieldset>
-                    <legend>СТОИМОСТЬ:</legend>
-                    <input type="range">
-                    <p class="filter-form-item">
-                        от
-                        <input type="text" name="name" value="" placeholder="0">
-                    </p>
-                    <p class="filter-form-item">
-                        до
-                        <input type="text" name="e-mail" value="" placeholder="15000">
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>СЕТКА:</legend>
-                    <ul>
-                        <li class="filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" id="adaptive-input-radio"
-                                type="radio" name="product-group" value="Adaptive" checked>
-                            <label class="label-input-radio" for="adaptive-input-radio">Адаптивная</label>
+    <main class="main-catalog">
+        <div class="main-catalog-columns">
+            <section class="catalog-filters">
+                
+    
+                <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset>
+                        <legend>СТОИМОСТЬ:</legend>
+                        <input type="range">
+                        <p class="filter-form-item">
+                            от
+                            <input type="text" name="name" value="" placeholder="0">
+                        </p>
+                        <p class="filter-form-item">
+                            до
+                            <input type="text" name="e-mail" value="" placeholder="15000">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>СЕТКА:</legend>
+                        <ul>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" id="adaptive-input-radio"
+                                    type="radio" name="product-group" value="Adaptive" checked>
+                                <label class="label-input-radio" for="adaptive-input-radio">Адаптивная</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio"
+                                    id="fixed-input-radio" name="product-group" value="Fixed">
+                                <label class="label-input-radio" for="fixed-input-radio">Фиксированная</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio"
+                                    id="rubber-input-radio" name="product-group" value="Rubber">
+                                <label class="label-input-radio" for="rubber-input-radio">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>ОСОБЕННОСТИ:</legend>
+                        <ul>
+                            <li class="filter-features-button">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Слайдер" id="slider-input-checkbox" checked>
+                                <label class="label-features-button label-option" for="slider-input-checkbox">
+                                    Слайдер
+                                </label>
+                            </li>
+                            <li class="filter-features-button">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Блок-преимуществ" id="advantages-input-checkbox">
+                                <label class="label-features-button label-option" for="advantages-input-checkbox">
+                                    Блок преимуществ
+                                </label>
+                            </li>
+                            <li class="filter-features-button">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Новости" id="news-input-checkbox" checked>
+                                <label class="label-features-button label-option" for="news-input-checkbox">
+                                    Новости
+                                </label>
+                            </li>
+                            <li class="filter-features-button">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Галерея" id="gallery-input-checkbox">
+                                <label class="label-features-button label-option" for="gallery-input-checkbox">
+                                    Галерея
+                                </label>
+                            </li>
+                            <li class="filter-features-button">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+                                    name="Корзина" id="basket-input-checkbox">
+                                <label class="label-features-button label-option" for="basket-input-checkbox">
+                                    Корзина
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+    
+                    <button class="filter-button-show" type="submit">
+                        ПОКАЗАТЬ
+                    </button>
+    
+                </form>
+    
+            </section>
+    
+    
+            <div class="sorting">
+                <section class="sorting-section">
+                    <form class="sorting-filter" action="httms://echo.htmlacademy.ru" method="post">
+                        <fieldset>
+                            <legend>СОРТИРОВАТЬ:</legend>
+                            <ul>
+                                <li class="sorting-input-button">
+                                    <input class="sorting-input-checkbox" type="checkbox" name="По цене"
+                                        id="sorting-label-checkbox-price" checked>
+                                    <label for="sorting-label-checkbox-price">По цене</label>
+                                </li>
+                                <li class="sorting-input-button">
+                                    <input class="sorting-input-checkbox" type="checkbox" name="По типу"
+                                        id="sorting-label-checkbox-type">
+                                    <label for="sorting-label-checkbox-type">По типу</label>
+                                </li>
+                                <li class="sorting-input-button">
+                                    <input class="sorting-input-checkbox" type="checkbox" name="По названию"
+                                        id="sorting-label-checkbox">
+                                    <label for="sorting-label-checkbox">По названию</label>
+                                </li>
+                                <li class="sorting-input-button">
+                                    <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-up">
+                                    <label for="input-button-up">
+                                        <img src="/image/icon-up-dir.svg" alt="">
+                                    </label>
+                                </li>
+                                <li class="sorting-input-button">
+                                    <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-down">
+                                    <label for="input-button-down">
+                                        <img src="/svg-nerds/icon-down-dir.svg" alt="">
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </section>
+        
+                <section class="templates">
+                    <div class="templates-img">
+                        <img class="browser-img" src="/image/img-sedona.jpg" alt="седона">
+                        <img src="/image/img-pink.jpg" alt="PINK">
+                        <img src="/image/img-barbershop.jpg" alt="Барбершоп">
+                        <img src="/image/img-mishka.jpg" alt="MISHKA">
+                        <img src="/image/img-aplus.jpg" alt="A+">
+                        <img src="/image/img-kvast.jpg" alt="КВАСТ">
+                    </div>
+        
+                    <ul class="pagination-list">
+                        <li class="pagination-item">
+                            <a href="#">1</a>
+                            </li>
+                        <li class="pagination-item">
+                            <a href="#">2</a>
                         </li>
-                        <li class="filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" type="radio"
-                                id="fixed-input-radio" name="product-group" value="Fixed">
-                            <label class="label-input-radio" for="fixed-input-radio">Фиксированная</label>
+                        <li class="pagination-item">
+                            <a href="#">3</a>
                         </li>
-                        <li class="filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" type="radio"
-                                id="rubber-input-radio" name="product-group" value="Rubber">
-                            <label class="label-input-radio" for="rubber-input-radio">Резиновая</label>
+                        <li class="pagination-item">
+                            <a href="#">СЛЕДУЮЩАЯ</a>
                         </li>
                     </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>ОСОБЕННОСТИ:</legend>
-                    <ul>
-                        <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Слайдер" id="slider-input-checkbox" checked>
-                            <label class="label-features-button label-option" for="slider-input-checkbox">
-                                Слайдер
-                            </label>
-                        </li>
-                        <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Блок-преимуществ" id="advantages-input-checkbox">
-                            <label class="label-features-button label-option" for="advantages-input-checkbox">
-                                Блок преимуществ
-                            </label>
-                        </li>
-                        <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Новости" id="news-input-checkbox" checked>
-                            <label class="label-features-button label-option" for="news-input-checkbox">
-                                Новости
-                            </label>
-                        </li>
-                        <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Галерея" id="gallery-input-checkbox">
-                            <label class="label-features-button label-option" for="gallery-input-checkbox">
-                                Галерея
-                            </label>
-                        </li>
-                        <li class="filter-features-button">
-                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                                name="Корзина" id="basket-input-checkbox">
-                            <label class="label-features-button label-option" for="basket-input-checkbox">
-                                Корзина
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
-
-                <button class="filter-button-show" type="submit">
-                    ПОКАЗАТЬ
-                </button>
-
-            </form>
-
-        </section>
-
-
-        <section class="sorting-section">
-            <form class="sorting-filter" action="httms://echo.htmlacademy.ru" method="post">
-                <fieldset>
-                    <legend>СОРТИРОВАТЬ:</legend>
-                    <ul>
-                        <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="По цене"
-                                id="sorting-label-checkbox-price" checked>
-                            <label for="sorting-label-checkbox-price">По цене</label>
-                        </li>
-                        <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="По типу"
-                                id="sorting-label-checkbox-type">
-                            <label for="sorting-label-checkbox-type">По типу</label>
-                        </li>
-                        <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="checkbox" name="По названию"
-                                id="sorting-label-checkbox">
-                            <label for="sorting-label-checkbox">По названию</label>
-                        </li>
-                        <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-up">
-                            <label for="input-button-up">
-                                <img src="/image/icon-up-dir.svg" alt="">
-                            </label>
-                        </li>
-                        <li class="sorting-input-button">
-                            <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-down">
-                            <label for="input-button-down">
-                                <img src="/svg-nerds/icon-down-dir.svg" alt="">
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
-            </form>
-        </section>
-
-        <section class="templates">
-            <div class="templates-img">
-                <img class="browser-img" src="/image/img-sedona.jpg" alt="седона">
-                <img src="/image/img-pink.jpg" alt="PINK">
-                <img src="/image/img-barbershop.jpg" alt="Барбершоп">
-                <img src="/image/img-mishka.jpg" alt="MISHKA">
-                <img src="/image/img-aplus.jpg" alt="A+">
-                <img src="/image/img-kvast.jpg" alt="КВАСТ">
+                </section>
             </div>
-
-            <ul class="pagination-list">
-                <li class="pagination-item">
-                    <a href="#">1</a>
-                    </li>
-                <li class="pagination-item">
-                    <a href="#">2</a>
-                </li>
-                <li class="pagination-item">
-                    <a href="#">3</a>
-                </li>
-                <li class="pagination-item">
-                    <a href="#">СЛЕДУЮЩАЯ</a>
-                </li>
-            </ul>
-        </section>
+        </div>
 
     </main>
 
 
-    <footer>
-
+    <footer class="main-footer">
         <section class="footer-map">
             <img src="/image/map+marker.png" alt="Как нас найти">
             <div class="footer-map-contacts">
                 <h4>NЁRDS DESIGN STUDIO</h4>
-                <p>191186, Санкт-Петербург,
-                    <br>ул. Б. Конюшенная, д. 19/8
-                    <br>тел. +7 (812) 275-75-75
+                <p>
+                    191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8 <br>тел.
+                    +7 (812) 275-75-75
                 </p>
                 <a class="contacts-map-button" href="contacts.html">Напишите нам</a>
             </div>
         </section>
 
         <section class="footer-cocial">
-            <div>
+            <div class="social-button">
                 <ul>
                     <li>
-                        <a class="social-button" href="#">
+                        <a href="#">
                             <img src="/svg-nerds/vk-icon.svg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a class="social-button" href="#">
+                        <a href="#">
                             <img src="/svg-nerds/fb-icon.svg" alt="Фейсбук">
                         </a>
                     </li>
                     <li>
-                        <a class="social-button" href="#">
+                        <a href="#">
                             <img src="/svg-nerds/insta-icon.svg" alt="Инстаграм">
                         </a>
                     </li>
                 </ul>
             </div>
-            <b>Давайте дружить, это выгодно!</b>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
+            <div class="footer-discount">
+                <b>Давайте дружить, это выгодно!</b>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+            </div>
         </section>
 
-        <section class="footer-modal-write-us">
-            <h3>Напишите нам</h3>
-
-            <form class="footer-modal-form" action="httms://echo.htmlacademy.ru" method="post">
-                <p class="modal-form-item">Ваше имя:<input type="text" name="name" value=""
-                        placeholder="Представьтесь, пожалуйста"></p>
-                <p class="modal-form-item">Ваш e-mail:<input type="text" name="e-mail" value=""
-                        placeholder="Для отправки ответа"></p>
-                <p class="modal-form-item">Текст письма:<input type="text" name="text" value=""
-                        placeholder="В свободной форме"></p>
-
-                <button class="button" type="submit">ОТПРАВИТЬ</button>
-            </form>
-
-            <span class="modal-close">X</span>
-            <img src="/image/modal-close.png" alt="закрыть окно">
-
+        <section class="footer-modal">
+            <div class="footer-modal-write-us">
+                <h3>Напишите нам</h3>
+    
+                <form class="footer-modal-form" action="httms://echo.htmlacademy.ru" method="post">
+                    <p class="modal-form-item">
+                        Ваше имя:<input type="text" name="name" value="" placeholder="Представьтесь, пожалуйста">
+                    </p>
+                    <p class="modal-form-item">
+                        Ваш e-mail:<input type="text" name="e-mail" value="" placeholder="Для отправки ответа">
+                    </p>
+                    <p class="modal-form-item">
+                        Текст письма:<input type="text" name="text" value="" placeholder="В свободной форме">
+                    </p>
+    
+                    <button class="button" type="submit">ОТПРАВИТЬ</button>
+                </form>
+    
+                <span class="modal-close">X</span>
+                <img src="/image/modal-close.png" alt="закрыть окно">
+            </div>
         </section>
-
     </footer>
 
 </body>
