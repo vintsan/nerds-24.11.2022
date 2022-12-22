@@ -18,6 +18,10 @@ body {
     background-image: url(/image/white-back.png);
     background-position: 0 0;
     background-repeat: repeat;
+
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
 }
 
 /* .visually-hidden {
@@ -35,10 +39,16 @@ a {
 
     background-color: #eeeeee;
     background-image: url(/image/grey-back.png);
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
+}
+
+.main-header h1 {
+    font-size: 55px;
+    line-height: 55px;
+    margin-bottom: 110px;
 }
 
 .main-navigation {
@@ -51,6 +61,7 @@ a {
     line-height: 30px;
     color: #000000;
     text-transform: uppercase;
+    margin-bottom: 80px;
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
@@ -110,6 +121,7 @@ a {
 
 
 .slider-content {
+    width: 1160px;
     margin: 0;
     padding: 0;
 
@@ -368,15 +380,27 @@ hr {
 }
 
 /* index-columns */
-.partners {
-    display: flex;
+.partners-section {
 
-    justify-content: space-between;
+    width: 1160px;
+    margin: 0 auto;
 
-    margin-bottom: 80px;
+    margin-bottom: 45px;
+    margin-top: 45px;
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
+}
+
+
+
+.partners-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 0;
 }
 
 .partners-logo li {
@@ -387,6 +411,14 @@ hr {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
+}
+
+
+.footer-map-contacts {
+    width: 320px;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 5px solid #15ec4b;
 }
 
 .footer-map-contacts p {
@@ -424,8 +456,29 @@ hr {
     opacity: 0.1;
 }
 
+
+
+/* footer */
+
+.main-footer {
+    margin-top: 80px;
+}
+
 .footer-cocial ul {
     list-style: none;
+}
+
+.footer-cocial {
+    display: flex;
+    margin-top: 80px;
+    padding: 70px;
+
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
 }
 
 .footer-cocial li {
@@ -440,6 +493,23 @@ hr {
     margin-top: 30px;
 }
 
+.social-button {
+    width: 260px;
+    margin: 0;
+    margin-right: 140px;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
+}
+
+.footer-discount {
+    width: 560px;
+    margin: 0;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
+}
+
 .footer-cocial b {
     font-size: 36px;
     line-height: 36px;
@@ -450,6 +520,25 @@ hr {
     line-height: 22px;
     font-weight: 400;
     image-rendering: crisp-edges;
+}
+
+
+.footer-modal {
+    width: 960px;
+    margin: 0 auto;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 5px solid #153cec;
+}
+
+.footer-modal-write-us {
+    display: flex;
+    align-items: center;
+
+
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 5px solid #c815ec;
 }
 
 .footer-modal-write-us h3 {
@@ -489,6 +578,9 @@ hr {
 
 .filter fieldset {
     border: none;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 5px solid #c815ec;
 }
 
 .filter legend {
