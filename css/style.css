@@ -1,12 +1,11 @@
-.html,
-body {
-    width: 1440px;
-    height: 2476px;
+html, body{
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    width: 1440px;
+
 
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
@@ -36,6 +35,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
 
     background-color: #eeeeee;
     background-image: url(../image/grey-back.png);
@@ -68,6 +68,8 @@ a {
 }
 
 .site-navigation {
+    display: flex;
+    flex-wrap: wrap;
     width: 500px;
     margin: 0;
     padding: 0;
@@ -77,9 +79,15 @@ a {
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
 }
+.site-navigation li {
+    width: 100px;
+    margin: 0 auto;
+}
+
 
 .user-navigation {
-    width: 180px;
+    display: flex;
+    max-width: 180px;
     margin: 0;
     padding: 0;
 
@@ -88,14 +96,40 @@ a {
     border: 1px solid #ec1515;
 }
 
+.user-navigation .login-link {
+    position: relative;
+    padding-left: 40px;
+}
+
+.login-link::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    right: 100px;
+
+    width: 15px;
+    height: 15px;
+    
+    background-image: url(/svg-nerds/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+}
+
 .site-navigation a,
 .user-navigation a {
+    display: block;
     color: #000000;
 }
 
-.main-header-logo {
+.main-header-logo {  
     width: 160px;
     height: 65px;
+}
+
+.login-link p {
+  
 }
 
 .main-header-logo img:hover {
@@ -121,21 +155,251 @@ a {
 
 
 
-
 .slider-content {
+    position: relative;
     width: 1160px;
-    margin: 0;
-    padding: 0;
+    height: 410px;
+    margin: 0 auto;
+    /* padding: 0; */
 
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-between; */
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
 }
+
+.slider-content input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+
+
+
+.slider-controls {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    width: 160px;
+    height: 20px;
+    margin-left: -80px;
+    text-align: center;
+    z-index: 1000;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #2315ec;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background: #ffffff;
+    border: 5px solid #ffffff;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background: #c1c1c1;
+}
+
+
+
+
+
+.slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: #b1ffde; */
+
+/*     display: flex;
+    align-items: center; */
+    /* justify-content: space-between; */
+}
+
+.slide-text {
+    max-width: 515px;
+    padding: 30px 0;
+    color: #283136;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
+}
+.slide-text p {
+    padding-bottom: 35px;
+}
+
+.slide-title {
+    font-size: 55px;
+    line-height: 1;
+    font-weight: 500;
+    color: #000;
+    padding-bottom: 25px;
+}
+
+.slider-content-info a {
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    text-align: center;
+
+    background-color: #fb565a;
+    border-radius: 2px;
+}
+
+.slide .button {
+    display: block;
+    width: 240px;
+    padding: 16px 0;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background: #fb565a;
+    border-radius: 3px;
+}
+
+.slide:nth-child(1) {
+    background-image: url(/image/slide1.png);
+    background-repeat: no-repeat;
+    background-position: 100% 10px;
+}
+
+
+.slide:nth-child(2) {
+    background-image: url(/image/slide2.png);
+    background-repeat: no-repeat;
+    background-position: 100% 10px;
+}
+.slide:nth-child(3) {
+    background-image: url(/image/slide3.png);
+    background-repeat: no-repeat;
+    background-position: 100% 10px;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    display: block;
+}
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
+}
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
+}
+
+
+.slider-content-info a:hover {
+    background-color: #e74246;
+}
+
+.slide .button:focus {
+    color: #e37376;
+    background-color: #be2c2f;
+}
+
+
+
+
+
+
+
+
+/* ФИЛЬТР/ФИЛЬТР/ФИЛЬТР/ФИЛЬТР */
+
+.range-filter {
+   
+   width: 260px;
+
+   font-size: 16px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   
+    color: #283136;
+
+}
+
+.range-controls {
+    position: relative;
+    height: 80px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    background: #eeeeee;
+    border-radius: 5px;
+    overflow: hidden;
+ }
+
+ .range-controls .scale{
+    margin-top: 39px;
+    height: 2px;
+    background: #d7dcde;
+ }
+
+ .range-controls .bar{
+    height: 2px;
+    background: #00ca74;
+ }
+
+ .range-controls .toggle{
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid #ffffff;
+    background: #ababab;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+ }
+
+ .range-controls .min-toggle{
+    left: 18px;
+}
+
+.range-controls .max-toggle{
+    left: 170px;
+}
+
+.price-controls input{
+    width: 60px;
+    padding: 8px 10px;
+    margin-left: 10px;
+    border: none;
+    background: #eeeeee;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #283136;
+}
+
+/* .price-controls .min-price{
+    margin-right: 30px;
+}
+ */
+.price-controls-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+ 
 
 .main-catalog {
     width: 1160px;
@@ -152,55 +416,6 @@ a {
     background-color: #ffffff;
 }
 
-.slider-navigation {
-    margin: 0;
-    padding: 0;
-    width: 90px;
-
-    /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 1px solid #ec1515;
-}
-
-.slider-content-info-list {
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-
-
-}
-
-.info-list {
-    min-width: 400px;
-
-    /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 1px solid #ec1515;
-}
-
-
-
-
-
-
-
-
-.slider-content-info a {
-    font-size: 16px;
-    line-height: 18px;
-    color: #000000;
-    text-align: center;
-
-    background-color: #fb565a;
-    border-radius: 2px;
-}
-
-.slider-content-info a:hover {
-    background-color: #e74246;
-}
-
-.slider-content-info .button:focus {
-    color: #e37376;
-    background-color: #be2c2f;
-}
 
 /* container */
 .main-page {
@@ -250,7 +465,17 @@ a {
 }
 
 .button-order1 {
-    color: #000000;
+    display: block;
+    width: 160px;
+    padding: 16px 0;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+  
+    
     background-color: #fb565a;
 }
 
@@ -264,6 +489,18 @@ a {
 }
 
 .button-order2 {
+    display: block;
+    width: 160px;
+    padding: 16px 0;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+   
+   
+
     background-color: #00ca74;
 }
 
@@ -277,6 +514,18 @@ a {
 }
 
 .button-order3 {
+    display: block;
+    width: 160px;
+    padding: 16px 0;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+
+  
+
     background-color: #efc84a;
 }
 
@@ -295,9 +544,8 @@ hr {
 }
 
 /* index-columns */
-.advantages {
+.advantages-wrapper {
     display: flex;
-
     justify-content: space-between;
 
     margin-bottom: 80px;
@@ -306,36 +554,51 @@ hr {
     border: 1px solid #ec1515;
 }
 
-.info-studio1 {
+.info-studio1 {    
     width: 660px;
 
+/* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
 }
 
-.info-studio2 {
-    width: 360px;
 
-    border: 1px solid #ec1515;
-}
 
 .info-studio1 h3 {
     font-size: 45px;
     line-height: 45px;
+    margin: 0;
+    padding: 40px 0;
+   /*  padding-bottom: 40px; */
 }
 
 .info-studio1 p {
     line-height: 24px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 45px;
 }
 
 .info-studio1 h4 {
     line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
 }
 
 .info-studio1 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info-studio1 li {
+    padding-bottom: 30px ;
+}
+.info-studio1 li:nth-child(3) {
+    padding: 0;
 }
 
 .info-studio1 li::before {
@@ -343,7 +606,18 @@ hr {
     margin-right: 10px;
 }
 
-.info-studio2-p {
+
+.info-studio2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+
+/* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
+}
+
+.info-studio2 legend {
     line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -354,6 +628,9 @@ hr {
     font-size: 45px;
     line-height: 20px;
     font-weight: 700;
+
+    /* ВРЕМЕННО ДЛЯ СЕТКИ */
+    border: 1px solid #ec1515;
 }
 
 .info-studio2 td span {
@@ -367,6 +644,8 @@ hr {
     line-height: 18px;
     font-weight: 400;
 }
+
+
 
 .partners-HTMLAcademy {
     width: 199px;
@@ -424,24 +703,68 @@ hr {
     list-style: none;
 }
 
-.footer-map h4 {
+.footer-map {
+    padding-bottom: 70px;
+}
+
+.footer-map-wrapper {
+    position: relative;
+    margin-top: 80px;
+}
+
+.footer-map-contacts h4 {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
+    padding-top: 52px;
+    padding-bottom: 25px;
 }
 
 
 .footer-map-contacts {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 320px;
-
+    height: 310px;
+    top: 50px;
+    left: 140px;
+    margin: 0 auto;
+    
+background: #ffffff;
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #15ec4b;
+    border: 1px solid #15ec4b;
 }
 
-.footer-map-contacts p {
+.footer-map-contacts-wrapper p {
     font-weight: 400;
     color: #666666;
     text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 18px;
+}
+
+.footer-map-contacts-wrapper p:nth-child(3) {
+    padding-bottom: 37px;
+}
+
+.contacts-map-button {
+    display: block;   
+    width: 220px;
+    padding: 16px 0;
+    margin-bottom: 47px;
+    font-size: 16px;
+    
+  
+    text-align: center;
+    text-decoration: none;
+
+    color: #ffffff;
+    background: #fb565a;
 }
 
 .footer-map-contacts a {
@@ -477,9 +800,7 @@ hr {
 
 /* footer */
 
-.main-footer {
-    margin-top: 80px;
-}
+
 
 .footer-cocial ul {
     list-style: none;
@@ -487,6 +808,7 @@ hr {
 
 .footer-cocial {
     display: flex;
+    align-items: center;
     margin-top: 80px;
     padding: 70px;
 
@@ -511,12 +833,20 @@ hr {
 }
 
 .social-button {
+   
     width: 260px;
     margin: 0;
-    margin-right: 140px;
+    margin-right: 140px;    
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
     border: 1px solid #ec1515;
+}
+
+.social-button ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-discount {
@@ -545,7 +875,7 @@ hr {
     margin: 0 auto;
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #153cec;
+    border: 1px solid #153cec;
 }
 
 .footer-modal-write-us {
@@ -555,7 +885,7 @@ hr {
 
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #c815ec;
+    border: 1px solid #c4ec15;
 }
 
 .footer-modal-write-us h3 {
@@ -599,12 +929,12 @@ hr {
 .filter {
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #c815ec;
+    border: 1px solid #27ec15;
 }
 
 .filter fieldset {
     border: none;
-
+    padding: 0;
 
 }
 
@@ -820,7 +1150,7 @@ hr {
 
 .templates {
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #00aa62;
+    border: 1px solid #00aa62;
     
 }
 
@@ -832,7 +1162,7 @@ hr {
 
   
 /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #153cec;
+    border: 1px solid #153cec;
 }
 
 
@@ -863,7 +1193,7 @@ hr {
 
 
     /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 5px solid #153cec;
+    border: 1px solid #153cec;
 }
 
 .pagination-item a {
