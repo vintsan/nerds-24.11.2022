@@ -270,19 +270,19 @@ a {
 }
 
 .slide:nth-child(1) {
-    background-image: url(/image/slide1.png);
+    background-image: url(../image/slide1.png);
     background-repeat: no-repeat;
     background-position: 100% 10px;
 }
 
 
 .slide:nth-child(2) {
-    background-image: url(/image/slide2.png);
+    background-image: url(../image/slide2.png);
     background-repeat: no-repeat;
     background-position: 100% 10px;
 }
 .slide:nth-child(3) {
-    background-image: url(/image/slide3.png);
+    background-image: url(../image/slide3.png);
     background-repeat: no-repeat;
     background-position: 100% 10px;
 }
