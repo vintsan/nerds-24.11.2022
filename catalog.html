@@ -39,7 +39,6 @@
         <div class="main-catalog-columns">
             <section class="catalog-filters">
                 
-    
                 <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                     <fieldset>
                         <div class="range-filter">
@@ -135,48 +134,62 @@
                 <section class="sorting-section">
                     <form class="sorting-filter" action="httms://echo.htmlacademy.ru" method="post">
                         <fieldset>
-                            <legend>СОРТИРОВАТЬ:</legend>
-                            <ul>
-                                <li class="sorting-input-button">
-                                    <input class="sorting-input-checkbox" type="checkbox" name="По цене"
-                                        id="sorting-label-checkbox-price" checked>
-                                    <label for="sorting-label-checkbox-price">По цене</label>
-                                </li>
-                                <li class="sorting-input-button">
-                                    <input class="sorting-input-checkbox" type="checkbox" name="По типу"
-                                        id="sorting-label-checkbox-type">
-                                    <label for="sorting-label-checkbox-type">По типу</label>
-                                </li>
-                                <li class="sorting-input-button">
-                                    <input class="sorting-input-checkbox" type="checkbox" name="По названию"
-                                        id="sorting-label-checkbox">
-                                    <label for="sorting-label-checkbox">По названию</label>
-                                </li>
-                                <li class="sorting-input-button">
-                                    <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-up">
-                                    <label for="input-button-up">
-                                        <img src="image/icon-up-dir.svg" alt="">
-                                    </label>
-                                </li>
-                                <li class="sorting-input-button">
-                                    <input class="sorting-input-checkbox" type="radio" name="up-down" id="input-button-down">
-                                    <label for="input-button-down">
-                                        <img src="image/icon-down-dir.svg" alt="">
-                                    </label>
-                                </li>
-                            </ul>
+                            <div class="sorting-filter-wrapper">
+                                <legend>СОРТИРОВАТЬ:</legend>
+                                <ul>
+                                    <li class="sorting-input-button">
+                                        <input class="visually-hidden sorting-input-checkbox" type="checkbox" name="По цене"
+                                            id="sorting-label-checkbox-price" checked>
+                                        <label for="sorting-label-checkbox-price">По цене</label>
+                                    </li>
+                                    <li class="sorting-input-button">
+                                        <input class="visually-hidden sorting-input-checkbox" type="checkbox" name="По типу"
+                                            id="sorting-label-checkbox-type">
+                                        <label for="sorting-label-checkbox-type">По типу</label>
+                                    </li>
+                                    <li class="sorting-input-button">
+                                        <input class="visually-hidden sorting-input-checkbox" type="checkbox" name="По названию"
+                                            id="sorting-label-checkbox">
+                                        <label for="sorting-label-checkbox">По названию</label>
+                                    </li>
+                                    <li class="sorting-input-button">
+                                        <input class="visually-hidden sorting-input-checkbox" type="radio" name="up-down" id="input-button-up">
+                                        <label for="input-button-up">
+                                            <img src="image/icon-up-dir.svg" alt="">
+                                        </label>
+                                    </li>
+                                    <li class="sorting-input-button">
+                                        <input class="visually-hidden sorting-input-checkbox" type="radio" name="up-down" id="input-button-down">
+                                        <label for="input-button-down">
+                                            <img src="image/icon-down-dir.svg" alt="">
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
                         </fieldset>
                     </form>
                 </section>
         
                 <section class="templates">
                     <div class="templates-img">
-                        <img class="browser-img" src="image/img-sedona.jpg" alt="седона">
-                        <img src="image/img-pink.jpg" alt="PINK">
-                        <img src="image/img-barbershop.jpg" alt="Барбершоп">
-                        <img src="image/img-mishka.jpg" alt="MISHKA">
-                        <img src="image/img-aplus.jpg" alt="A+">
-                        <img src="image/img-kvast.jpg" alt="КВАСТ">
+                        <a class="templates-img-focus" href="#">
+                            <img src="image/img-sedona.jpg" alt="седона">
+                        </a>
+                        <a href="#">
+                            <img src="image/img-pink.jpg" alt="PINK">
+                        </a>
+                        <a href="#">
+                            <img src="image/img-barbershop.jpg" alt="Барбершоп">
+                        </a>
+                        <a href="#">
+                            <img src="image/img-mishka.jpg" alt="MISHKA">
+                        </a>
+                        <a href="#">
+                            <img src="image/img-aplus.jpg" alt="A+">
+                        </a>
+                        <a href="#">
+                            <img src="image/img-kvast.jpg" alt="КВАСТ">
+                        </a>
                     </div>
         
                     <ul class="pagination-list">
