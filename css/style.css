@@ -53,7 +53,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 49px;
+    padding-top: 47px;
 
     background-color: #eeeeee;
     background-image: url(../image/grey-back.png);
@@ -345,7 +345,7 @@ a {
 
 /* ФИЛЬТР/ФИЛЬТР/ФИЛЬТР/ФИЛЬТР */
 .range-filter legend{
-    margin-bottom: 53px;
+    margin-bottom: 55px;
 }
 
 
@@ -1111,7 +1111,7 @@ background: #ffffff;
     list-style: none;
 
     padding-top: 20px;
-    padding-bottom: 47px;
+    padding-bottom: 46px;
  
 }
 
@@ -1131,7 +1131,7 @@ background: #ffffff;
 }
 
 .sorting-section {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 
 /*     border: 1px solid #c815ec; */
 }
@@ -1283,60 +1283,86 @@ background: #ffffff;
 
 
 
-/* templates */
+/* templates-list */
+.templates-list {
+    height: 1914px;
+    width: 760px;
+    margin: 0;
+    padding: 0;
 
-.templates {
-    /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 1px solid #00aa62;
-    
-}
-
-/* templates-img */
-.templates-img {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    
-  
+    flex-wrap: wrap;
+    align-content: space-between;
+    list-style: none;  
 /* ВРЕМЕННО ДЛЯ СЕТКИ */
-    border: 1px solid #153cec;
+/*     border: 1px solid #153cec; */
 }
 
-
-.templates-img a {
+.templates-img {
     position: relative;
+    
 }
 
-
-.templates-img a:hover{
-content: "";
-position: absolute;
-display: inline-block;
-width: 360px;
-height: 230px;
-left: 0;
-bottom: 0;
-background-color: #eeeeee;
-}
-
-/* .templates-img .browser-img {
-    display: inline-block;
-} */
-
-.templates-img a::before {
-    content: "";
-    display: block;
+.templates-popap {
+    content: " ";
+    position: absolute;
     width: 360px;
-    height: 40px;
-   
-
-    background: url(../image/browser.png) no-repeat;
-    opacity: 0.12;
+    height: 230px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #eeeeee;
+    text-align: center;
+   /*  display: none; */
 }
-.templates-img a:hover::before {
-    opacity: 1;
 
+.templates-popap b {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 26px;
+    margin-bottom: 15px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
 }
+.templates-popap p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    text-decoration: none;
+     
+}
+.templates-popap a{   
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    padding: 16px 63px;
+    background: #fb565a;
+    display: inline-block;
+}
+
+.templates-img a{
+    display: flex;
+    flex-direction: column;
+}
+.templates-img:hover path {
+    fill: #4d4d4d;
+}
+
+.templates-img:hover ~ .templates-popap {
+ 
+}
+
 
 
 
