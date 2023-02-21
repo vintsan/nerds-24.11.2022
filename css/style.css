@@ -302,12 +302,8 @@ hr {
     position: absolute;
    -webkit-appearance: none;
    -moz-appearance: none;
-<<<<<<< HEAD
-   appearance: none; 
-=======
    appearance: none;
    padding-left: 33px
->>>>>>> origin/master
 }
 
 .label-input-radio {
