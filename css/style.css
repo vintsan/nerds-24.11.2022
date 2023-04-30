@@ -1348,8 +1348,6 @@ background: #ffffff;
 
 .pagination-item-current a{
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px #dbdbdb;
-    padding: 13px 20px;
 }
 
 
@@ -1362,15 +1360,17 @@ background: #ffffff;
     padding: 16px 78px;
 }
 
+.pagination-item-current{
+    position: relative;
+}
 
 
-
-.pagination-item-current::after{
+.pagination-item-current a::after{
     content: "";
     position: absolute;
-    right: 20px;
-    bottom: 0;
-    left: 20px;
-    height: 3px;
-    background-color: #fff;
+    top: -17px;
+    right: 0;
+    bottom: -17px;
+    left: 0;
+    border: 3px solid #dbdbdb;
 }
