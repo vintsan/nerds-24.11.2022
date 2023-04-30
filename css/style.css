@@ -992,8 +992,9 @@ background: #ffffff;
     position: absolute;
    -webkit-appearance: none;
    -moz-appearance: none;
-   appearance: none;   
-} */
+   appearance: none;
+   padding-left: 33px
+}
 
 .label-input-radio {
     color: #485157;
