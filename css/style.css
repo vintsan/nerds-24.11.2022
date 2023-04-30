@@ -756,7 +756,7 @@ margin-bottom: 50px;
 
 .footer-map-wrapper {
     position: relative;
-    margin-top: 80px;
+    margin-top: 76px;
 }
 
 .footer-map-contacts h4 {
@@ -765,8 +765,8 @@ margin-bottom: 50px;
     font-weight: 700;
     margin: 0;
     padding: 0;
-    padding-top: 52px;
-    padding-bottom: 25px;
+    padding-top: 50px;
+    padding-bottom: 23px;
 }
 
 
@@ -777,7 +777,7 @@ margin-bottom: 50px;
     align-items: center;
     width: 320px;
     height: 310px;
-    top: 50px;
+    top: 53px;
     left: 140px;
     margin: 0 auto;
     
@@ -1235,7 +1235,7 @@ background: #ffffff;
     width: 760px;
     margin: 0;
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 76px;
 
     display: flex;
     justify-content: space-between;
@@ -1325,55 +1325,42 @@ background: #ffffff;
     padding: 0;
     list-style: none;
     display: flex;
-
-    align-items: center;
 }
 
-.pagination-item a {
+.pagination-list a {
     color: #000000;
     background-color: #eeeeee;
-    width: 50px;
-    height: 50px;
+    padding: 16px 21px;
 }
 
-.pagination-item {
+.pagination-list li {
     margin-right: 11px;
 }
 
-.pagination-item .pagination-item-current {
-    background-color: white;
-    border: 3px solid #dbdbdb;
-}
-
-.pagination-item .pagination-item-current:hover {
-    background-color: white;
-    border: 3px solid #dbdbdb;
-    cursor: default;
-}
-
-.pagination-item-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pagination-item:last-child a {
-    width: 260px;
-}
-.pagination-item:last-child {
-    width: 260px;
-    margin: 0;
-}
-.pagination-item a:hover, .pagination-item a:focus {
+.pagination-list a:hover, .pagination-list a:focus {
     background-color: #dfdfdf;
 }
 
-.pagination-item a:active {
+.pagination-list a:active {
     color: #a9a9a9;
     background-color: #d5d5d5;
-
 }
 
+.pagination-item-current a{
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px #dbdbdb;
+    padding: 13px 20px;
+}
+
+
+.pagination-item-current a:hover {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+.pagination-list li:last-child a {
+    padding: 16px 78px;
+}
 
 
 
