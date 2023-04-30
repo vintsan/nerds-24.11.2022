@@ -1346,11 +1346,6 @@ background: #ffffff;
     background-color: #d5d5d5;
 }
 
-.pagination-item-current a{
-    background-color: #ffffff;
-}
-
-
 .pagination-item-current a:hover {
     background-color: #ffffff;
     cursor: default;
@@ -1373,4 +1368,12 @@ background: #ffffff;
     bottom: -17px;
     left: 0;
     border: 3px solid #dbdbdb;
+}
+
+.pagination-item-current a[href]{
+    pointer-events: none;
+}
+
+.pagination-item-current a:not([href]){
+    background-color: #ffffff;
 }
