@@ -191,7 +191,6 @@
                 </div>
             </div>
         </section>
-
         <section class="footer-social">
             <div class="footer-social-button">
                 <ul>
@@ -230,30 +229,38 @@
                 <p>Скидка 10% для друзей из социальных сетей.</p>
             </div>
         </section>
-
-        <section class="footer-modal">
-            <div class="footer-modal-write-us">
-                <h3>Напишите нам</h3>
-
-                <form class="footer-modal-form" action="httms://echo.htmlacademy.ru" method="post">
-                    <p class="modal-form-item">
-                        Ваше имя:<input type="text" name="name" value="" placeholder="Представьтесь, пожалуйста">
-                    </p>
-                    <p class="modal-form-item">
-                        Ваш e-mail:<input type="text" name="e-mail" value="" placeholder="Для отправки ответа">
-                    </p>
-                    <p class="modal-form-item">
-                        Текст письма:<input type="text" name="text" value="" placeholder="В свободной форме">
-                    </p>
-
-                    <button class="button" type="submit">ОТПРАВИТЬ</button>
-                </form>
-
-                <span class="modal-close">X</span>
-                <img src="image/modal-close.png" alt="закрыть окно">
-            </div>
-        </section>
     </footer>
+
+    <section class="modal footer-modal">
+        <h2>Напишите нам</h2>
+
+        <div class="footer-modal-write-us">
+            <form class="footer-modal-form" action="httms://echo.htmlacademy.ru" method="post">
+                <p class="modal-form-item">
+                    <label for="user-login">Ваше имя:</label><br>
+                    <input class="login-user" id="user-login" type="text" name="login"
+                        placeholder="Представьтесь, пожалуйста">
+                </p>
+
+                <p class="modal-form-item">
+                    <label for="user-password">Ваш e-mail:</label><br>
+                    <input class="login-password" id="user-password" type="email" name="e-mail"
+                        placeholder="Для отправки ответа">
+                </p>
+
+                <p class="modal-form-item">
+                    <label for="text-letter">Текст письма:</label><br>
+                    <input class="user-letter" id="text-letter" type="text" name="letter"
+                        placeholder="В свободной форме">
+                </p>
+
+                <button class="footer-modal-button btn" type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+
+        <span class="modal-close">X</span>
+
+    </section>
 </body>
 
 </html>
