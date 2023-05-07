@@ -52,7 +52,7 @@ a {
 
 .btn {
     display: block;
-   /*  width: 240px; */
+    /*  width: 240px; */
     padding: 16px 0;
     font-size: 16px;
     color: #ffffff;
@@ -290,7 +290,7 @@ a {
 
 .slider-content-info {
     width: 240px;
- /*    padding: 17px 55px; */
+    /*    padding: 17px 55px; */
     display: inline-block;
 }
 
@@ -609,7 +609,7 @@ hr {
 }
 
 
-.info-studio-list{
+.info-studio-list {
     position: relative;
     margin: 0;
     padding: 0;
@@ -1363,7 +1363,8 @@ hr {
     padding: 67px 100px 84px 100px;
 
 }
-.modal-show{
+
+.modal-show {
     display: block;
 }
 
@@ -1441,10 +1442,16 @@ hr {
 .modal-close::before {
     transform: rotate(45deg);
 }
+.modal-close:hover::before, .modal-close:hover::after{
+   background-color: #fb565a;
+}
 
 .modal-close::after {
     transform: rotate(-45deg);
 }
+.modal-close:active::before, .modal-close:active::after{
+    background-color: #ffeeee;
+ }
 
 .form-row {
     display: flex;
@@ -1452,7 +1459,6 @@ hr {
     flex-grow: 1;
 }
 
-.full-width {}
 
 
 /*   .form-group {
@@ -1480,12 +1486,42 @@ hr {
     padding-right: 40px;
     margin-top: 11px;
     font: inherit;
-    opacity: 0.5;
     border-radius: 3px;
+    border: 2px solid #d7dcde;
 }
 
 .footer-modal-form input[class="user-letter"] {
     box-sizing: border-box;
     width: 760px;
     padding: 10px 15px 85px 14px;
+}
+
+.footer-modal-form input::placeholder {
+    color: #444444;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.footer-modal-form input:hover {
+    border-color: #b4b9bb;
+}
+
+.footer-modal-form input:focus {
+    border-color: #000000;
+}
+.footer-modal-form input:focus::placeholder {
+    opacity: 1; 
+}
+
+
+
+
+
+
+.footer-modal-form input.invalid {
+    border-color: red;
+}
+
+input.invalid::placeholder {
+    color: red;
 }
