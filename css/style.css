@@ -1343,6 +1343,8 @@ hr {
 /* МОДАЛЬНОЕ ОКНО "НАПИШИТЕ НАМ" */
 
 .modal {
+    display: none;
+
     position: fixed;
     color: #000;
 
@@ -1352,8 +1354,6 @@ hr {
 }
 
 .footer-modal {
-    display: none;
-
     top: 120px;
     left: 50%;
 
@@ -1362,6 +1362,9 @@ hr {
 
     padding: 67px 100px 84px 100px;
 
+}
+.modal-show{
+    display: block;
 }
 
 .footer-modal h2 {

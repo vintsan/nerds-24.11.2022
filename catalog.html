@@ -309,7 +309,7 @@
                         <h4>NЁRDS DESIGN STUDIO</h4>
                         <p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
                         <p>тел. +7 (812) 275-75-75</p>
-                        <a class="contacts-map-button btn" href="contacts.html">Напишите нам</a>
+                        <a class="contacts-map-button btn">Напишите нам</a>
                     </div>
                 </div>
             </div>
@@ -386,7 +386,32 @@
         <span class="modal-close">X</span>
 
     </section>
+<script>
+    var link = document.querySelector(".contacts-map-button");
+    var popap = document.querySelector(".footer-modal");
+    var close = document.querySelector(".modal-close")
+    var login = popap.querySelector("[name=login]")
+    var email = popap.querySelector("[name=e-mail]")
+    var form = popap.querySelector("form")
 
+    link.addEventListener
+    ("click", function(evt){
+        evt.preventDefault();
+        popap.classList.add("modal-show");
+        login.focus();
+    });
+    close.addEventListener
+    ("click", function(evt){
+            evt.preventDefault();
+            popap.classList.remove("modal-show");
+    });
+    form.addEventListener("submit", function(evt){
+        evt.preventDefault();
+        console.log("login.value");
+        console.log("e-mail.value");
+    });
+
+</script>
 </body>
 
 
