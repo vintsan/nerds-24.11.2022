@@ -1,35 +1,42 @@
 var link = document.querySelector(".contacts-map-button");
-var popap = document.querySelector(".footer-modal");
+var popup = document.querySelector(".footer-modal");
 var close = document.querySelector(".modal-close");
-var login = popap.querySelector("[name=login]");
-var email = popap.querySelector("[name=e-mail]");
-var form = popap.querySelector("form");
+var form = popup.querySelector("form");
+var login = popup.querySelector("[name=login]");
+var email = popup.querySelector("[name=email]");
+var storage = localStorage.getItem("login");
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popap.classList.add("modal-show");
-  login.focus();
+  popup.classList.add("modal-show");
+  if (storage) {
+    login.value = storage;
+    email.focus();
+  } else {
+    login.focus();
+  }
 });
+
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popap.classList.remove("modal-show");
+  popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
 });
+
 form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  console.log("login.value");
-  console.log("e-mail.value");
+  if (!login.value || !email.value) {
+    evt.preventDefault();
+    popup.classList.add("modal-error");
+  } else {
+    localStorage.setItem("login", login.value);
+  }
 });
 
-
-
-
-
-let input = document.querySelector('input[type="email"]');
-
-input.addEventListener('input', function() {
-    if (!this.validity.valid && document.activeElement === this) {
-        this.classList.add('invalid');
-    } else {
-        this.classList.remove('invalid');
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
     }
+  }
 });
