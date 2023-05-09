@@ -1220,7 +1220,7 @@ hr {
 
 
 .templates-popup {
-    content: " ";
+    content: "";
     position: absolute;
     width: 360px;
     height: 230px;
@@ -1228,8 +1228,7 @@ hr {
 
     background-color: #eeeeee;
     text-align: center;
-    /*  display: none; */
-    opacity: 0;
+    display: none;
 }
 
 .templates-popup b {
@@ -1274,9 +1273,11 @@ hr {
     fill: #4d4d4d;
 }
 
-.templates-popup:hover {
-    opacity: 1;
+.templates-img:hover .templates-popup {
+display: block;
+cursor: pointer;
 }
+
 
 .templates-popup a:hover {
     background-color: #e74246;
@@ -1376,9 +1377,7 @@ hr {
 
 }
 
-.modal-show {
-    display: block;
-}
+
 
 .footer-modal h2 {
     font-size: 45px;
@@ -1513,7 +1512,9 @@ hr {
 
 
 
-
+.productcard-modal-show {
+    display: block;
+}
 
 .modal-show {
     display: block;
